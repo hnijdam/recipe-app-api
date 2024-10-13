@@ -1,6 +1,7 @@
 """
 Views for the recipe APIs
 """
+
 from rest_framework import(
      viewsets,
      mixins,
@@ -38,6 +39,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
         """Create a new recipe"""
         serializer.save(user=self.request.user)
 
+
 class TagViewSet(mixins.DestroyModelMixin,
                  mixins.UpdateModelMixin,
                  mixins.ListModelMixin,
@@ -51,5 +53,3 @@ class TagViewSet(mixins.DestroyModelMixin,
     def get_queryset(self):
         """Filter queryset to authenticated user."""
         return self.queryset.filter(user=self.request.user).order_by('-name')
-
-
