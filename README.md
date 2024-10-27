@@ -8,7 +8,9 @@ Dit project is een **Recipe API** gebouwd met **Django** en de **Django REST fra
 
 - Python 3.x
 - Django
+- Docker
 - Django REST framework
+- Swagger UI
 - PostgreSQL
 
 ### Installation
@@ -61,3 +63,5 @@ Dit project is een **Recipe API** gebouwd met **Django** en de **Django REST fra
 - **Recipes**: `/api/recipes/`
 - **Tags**: `/api/tags/`
 - **Ingredients**: `/api/ingredients/`
+
+#### Nog steeds een work in progress..dus stay tuned for updates.
