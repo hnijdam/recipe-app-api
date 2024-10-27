@@ -41,13 +41,13 @@ pip install -r requirements.txt
 
 ---
 
-* Run Migrations
+* _Run Migrations_:
 ```bash
 python manage.py migrate
 ```
 ---
 
-* Create a superuser:
+* _ Create a superuser_:
 ```bash
 python manage.py createsuperuser
 ```
@@ -59,6 +59,7 @@ python manage.py createsuperuser
 - Tags: /api/tags/
 - Ingredients: /api/ingredients/
 
+EOF
 
 
 
