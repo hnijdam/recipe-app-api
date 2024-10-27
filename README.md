@@ -1,61 +1,63 @@
 # Recipe API Project
 
-This project is a Recipe API built with Django and Django REST framework, along with a frontend built using React and Tailwind CSS.
+Dit project is een **Recipe API** gebouwd met **Django** en de **Django REST framework**, en een frontend die gebruikmaakt van **React** en **Tailwind CSS**.
 
 ## Backend Setup
----
-## Prerequisites
+
+### Prerequisites
 
 - Python 3.x
 - Django
 - Django REST framework
 - PostgreSQL
----
+
 ### Installation
 
-* _Clone the repository_:
-   ```bash
-   git clone https://github.com/hnijdam/recipe-api.git
-   cd recipe-api
-   ```
+1. **Clone de repository**:
+    ```bash
+    git clone https://github.com/hnijdam/recipe-api.git
+    cd recipe-api
+    ```
 
-* _Create a virtual environment and activate it_:
----
-```python
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+2. **Maak een virtual environment aan en activeer deze**:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Voor Windows: `venv\Scripts\activate`
+    ```
 
+3. **Installeer de vereiste pakketten**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
----
-* Install the required packages:
-```python
-pip install -r requirements.txt
+4. **PostgreSQL database instellen**:
+   - Maak een PostgreSQL database en gebruiker aan.
+   - Update de `DATABASES` instelling in `settings.py` met jouw databasegegevens:
+     ```python
+     DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.postgresql',
+             'NAME': 'jouw_database_naam',
+             'USER': 'jouw_database_gebruiker',
+             'PASSWORD': 'jouw_database_wachtwoord',
+             'HOST': 'localhost',  # Of het IP-adres van je database
+             'PORT': '5432',       # De standaard PostgreSQL poort
+         }
+     }
+     ```
 
+5. **Voer de migraties uit**:
+    ```bash
+    python manage.py migrate
+    ```
 
+6. **Maak een superuser aan**:
+    ```bash
+    python manage.py createsuperuser
+    ```
 
+### API Endpoints
 
-* _Set up the PostgreSQL database_:
-- Create a PostgreSQL database and user.
-- Update the DATABASES setting in settings.py with your database credentials.
-
-
-* _Run Migrations_:
-```python
-python manage.py migrate
-
-
-* _ Create a superuser_:
-```python
-python manage.py createsuperuser
-
-
-#### API Endpoints
-
-- Recipes: /api/recipes/
-- Tags: /api/tags/
-- Ingredients: /api/ingredients/
-
-EOF
-
-
-
+- **Recipes**: `/api/recipes/`
+- **Tags**: `/api/tags/`
+- **Ingredients**: `/api/ingredients/`
