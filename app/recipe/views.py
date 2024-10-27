@@ -6,6 +6,7 @@ from rest_framework import(
      viewsets,
      mixins,
 )
+
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
@@ -24,7 +25,6 @@ class RecipeViewSet(viewsets.ModelViewSet):
     queryset = Recipe.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
-
 
     def get_queryset(self):
         """Retrieve recipes for authenticated user."""
