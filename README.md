@@ -36,7 +36,7 @@ Dit project is een **Recipe API** gebouwd met **Django** en de **Django REST fra
      ```python
      DATABASES = {
          'default': {
-             'ENGINE': 'django.db.backends.postgresql',
+             'ENGINE': 'django.db.backends.postgresql',S
              'NAME': 'jouw_database_naam',
              'USER': 'jouw_database_gebruiker',
              'PASSWORD': 'jouw_database_wachtwoord',

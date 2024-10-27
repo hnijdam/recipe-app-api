@@ -9,6 +9,7 @@ from core.models import (
      Ingredient,
 )
 
+
 class IngredientSerializer(serializers.ModelSerializer):
     """Serializer fro Ingredients."""
 
@@ -16,6 +17,7 @@ class IngredientSerializer(serializers.ModelSerializer):
         model = Ingredient
         fields = ['id', 'name']
         read_only_fields = ['id']
+
 
 class TagSerializer(serializers.ModelSerializer):
     """Serializer for tags."""
