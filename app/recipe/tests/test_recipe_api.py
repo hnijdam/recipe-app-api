@@ -335,3 +335,4 @@ class PrivateRecipeApiTests(TestCase):
                 name=ingredient['name'],
                 user=self.user,
             ).exists()
+            self.assertTrue(exists)
