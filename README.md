@@ -19,33 +19,38 @@ This project is a Recipe API built with Django and Django REST framework, along 
    cd recipe-api
 
 * _Create a virtual environment and activate it_:
-
+---
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
+---
 * Install the required packages:
 ```bash
 pip install -r requirements.txt
+---
 
 * Set up the PostgreSQL database:
 Set up the PostgreSQL database:
 
 - Create a PostgreSQL database and user.
 - Update the DATABASES setting in settings.py with your database credentials.
+---
 
 * Run Migrations
 ```bash
 python manage.py migrate
+---
 
 * Create a superuser:
 ```bash
 python manage.py createsuperuser
+---
 
 #### API Endpoints
-Recipes: /api/recipes/
-Tags: /api/tags/
-Ingredients: /api/ingredients/
+
+- Recipes: /api/recipes/
+- Tags: /api/tags/
+- Ingredients: /api/ingredients/
 
 
 
